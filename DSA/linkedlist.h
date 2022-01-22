@@ -1,9 +1,11 @@
-#include<iostream>
-
-using namespace std;
-
-
+/********************************************************/
+/*														*/
+/*                     Linked List						*/
+/*														*/
+/********************************************************/
 /*----------Class and structure declaration------------*/
+#include<stdexcept>
+
 template <typename LinkedListDataType>
 class LinkedList{
 private:
@@ -75,27 +77,31 @@ public:
 	//---1.find the previous node to delete node
 	//---2.set previeous node->next to deleteNode->next
 	//---3.decrease the size - 1
-	int remove(int index=-1){
+	LinkedListDataType remove(int index=-1){
 		if(index == -1)
 			index = size-1;	
 		if(size == 0)
-			return -1;
+			return headNode->data;
 		if(index>=0 && index<=size-1){
 			struct Node * currentNode = headNode,*deletingNode;
 			int count=0;
+			LinkedListDataType data;
 			if(count==index){
+				LinkedListDataType data = headNode->data;
 				headNode = headNode->next;
 				size-=1;
-				return 0;
+				return data;
 			}
 			while (count != index-1){
 				currentNode = currentNode->next;
 				count+=1;
 			}
 			deletingNode = currentNode->next;
+			data = deletingNode->data;
 			currentNode->next = currentNode->next->next;
 			size-=1;
-			return 0;
+			
+			return data;
 		}
 		return -1;
 	}
@@ -122,41 +128,38 @@ public:
 		return -1;
 	}
 	
+	//Function for getting the data at specific index
+	//Algorithm
+	//---1.Iterate the linked list until index
+	LinkedListDataType getItem(int index){
+		//LinkedListDataType data = LinkedListDataType;
+		LinkedListDataType data;
+		if (size == 0){
+			return data;
+		}
+		if (index >= size-1 && index < 0)
+			throw std::invalid_argument("Stack index value is not correct");
+		struct Node *iterateNode = headNode;
+		int count=0;
+		while(count != index){
+			iterateNode = iterateNode->next;
+		}
+		return iterateNode->data;	
+
+	}
+	
 	//For printing all data out also traversing
 	void coutData(){
 		struct Node * lastNode=headNode;
 		if(size==0){
-			cout << "Size: " << size<<endl;
+			std::cout << "Size: " << size<<std::endl;
 			return;
 		}
 		do{
-			cout << lastNode->data<< endl;	
+			std::cout << lastNode->data<< std::endl;	
 			lastNode = lastNode->next;	
 		}while(lastNode!=nullptr);
-		cout << "Size: " << size<<endl;
+		std::cout << "Size: " << size<<std::endl;
 	}
-
-
 };
-
-/*-----------Main--------------------*/
-int main(){
-	LinkedList<int> list;
-	list.addItem(10);
-	list.addItem(32);
-	list.addItem(33);
-	list.addItem(89);
-	cout << "Size of LinkedList is: " << list.getSize() << endl;
-	list.coutData();	
-	cout << "Inserting Item at index: " << endl;
-	list.addItem(0,0);
-	list.addItem(10,0);
-	list.coutData();
-	cout << "Deleting Item at index: " << endl;
-	list.remove(2);
-	list.pop();
-	list.coutData();
-	cout << "Searching element with value: 33" << endl;
-	cout << "Fount at: " << list.search(33) << endl;
-}
 
