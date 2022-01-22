@@ -8,3 +8,13 @@ Justed watched some tutorial on youtube due to heavy fever
 
 ### Day 2
 Learned about linked list and created program based on it. Learned it insertion operation.
+
+### Day 3
+**Today progress**: Complete linked list from DSA.
+**Description**: Today i have completed learning about linked lists. I have created all the basic operation in c/c++ like 
+- Insertion
+- Deletion
+- Searching
+- Traversing
+
+
