@@ -7,8 +7,6 @@
 /****************************************************/
 
 
-
-
 //Linear search
 //Algorithm:
 //---1.check first element and then go if not match go to next utile we find
@@ -24,7 +22,6 @@ int linear_search(std::vector<SearchingDataType>  array,SearchingDataType search
 	}
 	return -1;
 }
-
 
 //Binaray Search
 //Algorithm
@@ -68,4 +65,42 @@ int binary_search(std::vector<SearchingDataType> array,SearchingDataType searchV
 	}
 	return 0;
 
+}
+
+
+//interpolation serach method
+//
+//It is more optimise that binary search its best time complexity is O(log log n)
+//But its worst case complexity is O(n)
+//
+//Algorithm
+//---1.First let take start and end index then find a pos valriable
+//---2.The pos variabel give rough idea where the element could be if it is in array
+//---3.Formulal for pos = start + ((end-start)/(arr[end]-arr[start]))*(e - arr[start]
+//------ e     - represent searching value
+//------ start - represent starting index
+//------ end   - represent end index of array
+//------ arr   - represent the array for serching
+//---4.Check if arr[start] == e if yes then return index other change pos to start+1
+//---5.Perform this algorthim until you find element or start<=end and arr[start]!=e
+//
+template <class SearchDataType>
+int interpolation_search(std::vector<SearchDataType> arr,
+						SearchDataType searchValue){
+	
+	int start=0, end=arr.size()-1,pos=0;
+
+		
+	while(start<=end && searchValue>=arr[start] && searchValue<=arr[end])
+	{
+		pos=(start+((double)(end-start)/(arr[end]-arr[start]))*(searchValue - arr[start]));
+		std::cout << "Start : " << start << "End : " << end << "Pos :" << pos <<std::endl;
+		if(arr[pos]==searchValue)
+			return pos;
+		if(arr[pos] < searchValue)
+			start=pos + 1;
+		else
+			end = pos - 1;
+	}
+	return -1;
 }
