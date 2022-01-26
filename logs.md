@@ -37,7 +37,17 @@ Started the searching algorithm and learned about linear and binary search algor
 
 **Description**:Created a .h file of searching alorithm currently with 2 method one for linear search using vector and other using binary search and tested it in an other file that is not uploded.
 
+### Day 7
+**Todays Progress**:
+Learned and created interpolation search algorithm in c++.
 
+**Description**:Created a function in searchingAlgo.h file for interpolation search with help of vector and debuged it.
+
+### Day 8
+**Todays Progress**:
+Learned and created hash table data structure in c++.
+
+**Description**:Created a class called HashTable in a hashtable.h file and create basicaly 4-5 method in it like one for insertion, deletion, searching and one for constructor and learned how basical a hash tabel work. Also discovered the std::map inside c++ standard library .
 
 
 
