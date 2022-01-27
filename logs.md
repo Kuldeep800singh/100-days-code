@@ -49,5 +49,9 @@ Learned and created hash table data structure in c++.
 
 **Description**:Created a class called HashTable in a hashtable.h file and create basicaly 4-5 method in it like one for insertion, deletion, searching and one for constructor and learned how basical a hash tabel work. Also discovered the std::map inside c++ standard library .
 
+### Day 9
+**Todays Progress**
+Learned about bubble sort algorithm and implemented in c++.
 
+**Description**: Create a function called bubble_sort that table a std::vector as a parameter to its refernce and sort the array using the bubble sort algorithm. It return void.
 
