@@ -50,8 +50,13 @@ Learned and created hash table data structure in c++.
 **Description**:Created a class called HashTable in a hashtable.h file and create basicaly 4-5 method in it like one for insertion, deletion, searching and one for constructor and learned how basical a hash tabel work. Also discovered the std::map inside c++ standard library .
 
 ### Day 9
-**Todays Progress**
+**Todays Progress**:
 Learned about bubble sort algorithm and implemented in c++.
 
 **Description**: Create a function called bubble_sort that table a std::vector as a parameter to its refernce and sort the array using the bubble sort algorithm. It return void.
 
+### Day 10
+**Todays Progress**:
+Learned about selection and insertion sort and also started to feel boring in dsa.
+
+**Description**: Today i started feeling little bit boring about dsa a started to create a sorting algorithm project like visualizing soriting algroithm. I am using html,css and js for it also hosting it on github so every body can and also started to do leet code from today onward.
