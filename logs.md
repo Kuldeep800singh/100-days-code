@@ -60,3 +60,16 @@ Learned about bubble sort algorithm and implemented in c++.
 Learned about selection and insertion sort and also started to feel boring in dsa.
 
 **Description**: Today i started feeling little bit boring about dsa a started to create a sorting algorithm project like visualizing soriting algroithm. I am using html,css and js for it also hosting it on github so every body can and also started to do leet code from today onward.
+
+### Day 11
+**Todays Progress**:
+Registerd for google hash code and started to solve the hash code problem. Learned and create merge sort funciton in c++.
+
+**Description**: Registed my self with my team on hash code and also started to solve hash code problem and also completed the merge sort algorithm in c++.
+
+
+### Day 12
+**Todays Progress**:
+Done one leet code proble of plaidrom and fixing merge sort.
+
+**Description**: Today i have taken my most of the time solveing some problem in merge sort their is still to fix merging process in merge sort. Today i also solved one leet code problem of palidrom.
